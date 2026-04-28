@@ -44,17 +44,25 @@ async function analyzeImage() {
   btn.disabled = true;
   document.getElementById('loading').classList.remove('hidden');
 
+  // Show "waking up" message if server takes too long (Render free tier sleep)
+  const slowTimer = setTimeout(() => {
+    document.querySelector('#loading p').textContent =
+      'Waking up server... please wait (~30s on first request)';
+  }, 8000);
+
   const formData = new FormData();
   if (file) formData.append('file', file);
   if (description) formData.append('description', description);
 
   try {
     const res = await fetch(`${API}/analyze`, { method: 'POST', body: formData });
+    clearTimeout(slowTimer);
     if (!res.ok) throw new Error(`Server error: ${res.status}`);
     const data = await res.json();
     if (data.error) throw new Error(data.error);
     showResult(data);
   } catch (err) {
+    clearTimeout(slowTimer);
     document.getElementById('loading').classList.add('hidden');
     btn.disabled = false;
     errEl.textContent = err.message.includes('Failed to fetch')
