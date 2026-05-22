@@ -421,4 +421,65 @@ textarea::placeholder { color: #444; }
     .container { margin: 30px auto; }
     .form-card { padding: 20px; }
     .score-section { flex-direction: column; text-align: center; }
+}.header {
+    border: 1px solid rgba(255,255,255,0.08);
+    background: #111;
+    color: white;
+    padding: 22px;
+    resize: none;
+    outline: none;
+    font-size: 16px;
+}
+
+textarea:focus {
+    border-color: #00E606;
+    box-shadow: 0 0 30px rgba(0,230,6,0.14);
+}
+
+#analyzeBtn {
+    width: 100%;
+    margin-top: 24px;
+    border: none;
+    border-radius: 24px;
+    padding: 22px;
+    font-size: 20px;
+    font-weight: 800;
+    background: linear-gradient(135deg,#00E606,#8fff83);
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 0 40px rgba(0,230,6,0.3);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .header {
+        padding: 18px 18px;
+    }
+
+    .brand-name {
+        font-size: 22px;
+    }
+
+    .header-btn {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-card {
+        padding: 20px;
+        border-radius: 28px;
+    }
+
+    .upload-zone {
+        padding: 40px 20px;
+    }
+
 }

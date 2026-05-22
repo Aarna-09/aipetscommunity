@@ -11,43 +11,90 @@
 </head>
 <body class="dark-theme">
 
-<header class="header">
+<<header class="header">
+
+    <div class="header-glow"></div>
+
     <div class="logo-box">
-        <div class="paw-icon">
-            <img src="static/paw.png">
+        <div class="logo-wrap">
+            <img src="static/paw.png" class="logo-img">
         </div>
+
         <div class="brand-group">
-            
-            <span class="brand-name">Animalslover</span>
-            <span class="tagline">love & respect it</span>
+            <span class="brand-name">Animalslover AI</span>
+            <span class="tagline">Smart AI Pets Community</span>
         </div>
     </div>
+
+    <nav class="desktop-nav">
+        <a href="#">Home</a>
+        <a href="#">AI Analysis</a>
+        <a href="#">Community</a>
+        <a href="#">Pet Care</a>
+    </nav>
+
+    <button class="header-btn">
+        Launch AI
+    </button>
+
 </header>
 
 <!-- Upload Page -->
 <main class="container" id="upload-page">
-    <h1 class="hero-title">Smart Pet Health Analysis System</em></h1>
-    <p class="hero-sub">Upload a photo/video or describe symptoms for instant AI analysis</p>
 
-    <div class="form-card">
+    <div class="hero-badge">
+        AI Powered Pet Health Detection
+    </div>
+
+    <h1 class="hero-title">
+        Next Generation
+        <span>AI Pets Community</span>
+    </h1>
+
+    <p class="hero-sub">
+        Upload pet photos, analyze diseases, connect with pet lovers,
+        and get instant AI-powered pet care insights.
+    </p>
+
+    <div class="hero-card">
+
         <div class="upload-zone" onclick="document.getElementById('fileInput').click()">
             <input type="file" id="fileInput" accept="image/*,video/*" hidden>
-            <span class="upload-icon">📸</span>
-            <span class="upload-text">Upload Photo or Video</span>
-            <p id="fileNameDisplay">JPG, PNG, MP4 — click to browse</p>
+
+            <div class="upload-icon-wrap">
+                <span class="upload-icon">🐾</span>
+            </div>
+
+            <span class="upload-text">
+                Upload Photo or Video
+            </span>
+
+            <p id="fileNameDisplay">
+                JPG, PNG, MP4 supported
+            </p>
         </div>
 
         <div id="preview-wrap" class="hidden">
             <img id="preview-img" src="" alt="Preview">
         </div>
 
-        <div class="section-label">Describe Symptoms</div>
-        <textarea id="textInput" placeholder="e.g. redness on skin, itching ears, lethargy, not eating..."></textarea>
+        <div class="section-label">
+            Describe Symptoms
+        </div>
+
+        <textarea
+            id="textInput"
+            placeholder="e.g. skin redness, itching, vomiting, ear infection..."
+        ></textarea>
 
         <div id="error-msg" class="error-text hidden"></div>
 
-        <button onclick="analyzeImage()" id="analyzeBtn">⚡ Start AI Analysis</button>
+        <button onclick="analyzeImage()" id="analyzeBtn">
+            ⚡ Analyze with AI
+        </button>
+
     </div>
+
 </main>
 
 <!-- Result Page -->
