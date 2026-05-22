@@ -6,109 +6,83 @@
     <title>Animalslover | Smart Pet Health Analysis System</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark-theme">
 
-<<header class="header">
+<div class="ambient-glow orb-1"></div>
+<div class="ambient-glow orb-2"></div>
 
-    <div class="header-glow"></div>
-
-    <div class="logo-box">
-        <div class="logo-wrap">
-            <img src="static/paw.png" class="logo-img">
-        </div>
-
-        <div class="brand-group">
-            <span class="brand-name">Animalslover AI</span>
-            <span class="tagline">Smart AI Pets Community</span>
+<header class="header">
+    <div class="header-container">
+        <div class="logo-box">
+            <div class="paw-icon-container">
+                <img src="static/logo.jpg" alt="Animalslover Logo" class="main-logo-img full-logo">
+            </div>
+            
         </div>
     </div>
-
-    <nav class="desktop-nav">
-        <a href="#">Home</a>
-        <a href="#">AI Analysis</a>
-        <a href="#">Community</a>
-        <a href="#">Pet Care</a>
-    </nav>
-
-    <button class="header-btn">
-        Launch AI
-    </button>
-
 </header>
 
-<!-- Upload Page -->
 <main class="container" id="upload-page">
-
-    <div class="hero-badge">
-        AI Powered Pet Health Detection
+    <div class="hero-section text-fade-in">
+        <h1 class="hero-title">Smart Pet Health <br><span class="premium-shimmer-text">Analysis System</span></h1>
+        <p class="hero-sub">Upload a photo/video or describe detailed behavioral symptoms for instant AI medical screening.</p>
     </div>
 
-    <h1 class="hero-title">
-        Next Generation
-        <span>AI Pets Community</span>
-    </h1>
-
-    <p class="hero-sub">
-        Upload pet photos, analyze diseases, connect with pet lovers,
-        and get instant AI-powered pet care insights.
-    </p>
-
-    <div class="hero-card">
-
-        <div class="upload-zone" onclick="document.getElementById('fileInput').click()">
-            <input type="file" id="fileInput" accept="image/*,video/*" hidden>
-
-            <div class="upload-icon-wrap">
-                <span class="upload-icon">🐾</span>
+    <div class="cyber-card-wrapper anim-slide-up">
+        <div class="form-card premium-glow-card">
+            
+            <div class="upload-zone interactive-zone" onclick="document.getElementById('fileInput').click()">
+                <input type="file" id="fileInput" accept="image/*,video/*" hidden>
+                <div class="upload-icon-wrapper">
+                    <span class="upload-icon">📸</span>
+                </div>
+                <span class="upload-text">Drop Media or Browse</span>
+                <p id="fileNameDisplay">Supports JPG, PNG, MP4 — click to upload</p>
             </div>
 
-            <span class="upload-text">
-                Upload Photo or Video
-            </span>
+            <div id="preview-wrap" class="hidden">
+                <div class="preview-overlay-tag">Selected Asset</div>
+                <img id="preview-img" src="" alt="Preview">
+            </div>
 
-            <p id="fileNameDisplay">
-                JPG, PNG, MP4 supported
-            </p>
+            <div class="section-label-wrapper">
+                <div class="section-indicator-dot pulsing-glow-node"></div>
+                <span class="section-label">Describe Clinical Symptoms</span>
+            </div>
+            <textarea id="textInput" placeholder="e.g., Acute redness near the left ear base, consistent scratching, low appetite since last 24 hours..."></textarea>
+
+            <div id="error-msg" class="error-text hidden"></div>
+
+            <button onclick="analyzeImage()" id="analyzeBtn" class="premium-neon-btn">
+                <span class="btn-shine-layer"></span>
+                <span class="btn-text">⚡ Initialize AI Diagnosis</span>
+            </button>
         </div>
-
-        <div id="preview-wrap" class="hidden">
-            <img id="preview-img" src="" alt="Preview">
-        </div>
-
-        <div class="section-label">
-            Describe Symptoms
-        </div>
-
-        <textarea
-            id="textInput"
-            placeholder="e.g. skin redness, itching, vomiting, ear infection..."
-        ></textarea>
-
-        <div id="error-msg" class="error-text hidden"></div>
-
-        <button onclick="analyzeImage()" id="analyzeBtn">
-            ⚡ Analyze with AI
-        </button>
-
     </div>
-
 </main>
 
-<!-- Result Page -->
 <main class="container hidden" id="result-page">
-    <div class="form-card">
-        <button onclick="location.reload()" class="back-btn">← Back to Analysis</button>
-        <div id="result-content"></div>
+    <div class="cyber-card-wrapper">
+        <div class="form-card premium-glow-card">
+            <button onclick="location.reload()" class="back-btn">
+                <span class="back-arrow">←</span> Return to Dashboard
+            </button>
+            <div id="result-content"></div>
+        </div>
     </div>
 </main>
 
-<!-- Loading Overlay -->
 <div id="loading" class="loading-overlay hidden">
-    <div class="spinner"></div>
-    <p>AI is analyzing your pet...</p>
+    <div class="spinner-container">
+        <div class="premium-spinner"></div>
+        <div class="spinner-pulse-glow"></div>
+        <div class="spinner-outer-ring"></div>
+    </div>
+    <p class="loading-main-text">Analyzing Biomarkers...</p>
+    <p class="loading-sub-text">Running deep learning health verification models</p>
 </div>
 
 <script src="script.js"></script>
