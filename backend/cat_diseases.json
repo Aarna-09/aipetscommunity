@@ -1,0 +1,2251 @@
+[
+  {
+    "id": "C001",
+    "common_name": "Ear Mites",
+    "aliases": [
+      "ear mites",
+      "cat scratching ears",
+      "brown ear debris",
+      "coffee grounds ear",
+      "cat ear mites"
+    ],
+    "urgency": "Low",
+    "cause": "Infestation with Otodectes cynotis mites that live in the ear canal and feed on skin debris.",
+    "warning": "Highly contagious between cats and other pets. Untreated infestations can lead to secondary ear infections.",
+    "symptoms": [
+      "ear scratching",
+      "head shaking",
+      "ear irritation",
+      "ear odor",
+      "dark ear debris"
+    ],
+    "visual_symptoms": [
+      "black ear debris",
+      "red ear canal",
+      "scratched ears",
+      "hair loss around ears"
+    ],
+    "medicines": [
+      {
+        "name": "Selamectin",
+        "type": "Topical Parasiticide",
+        "dispensing": "Prescription",
+        "note": "Common veterinary treatment for ear mites."
+      }
+    ],
+    "topical_treatments": [
+      {
+        "name": "Veterinary Ear Cleanser",
+        "type": "Ear Cleaning Solution",
+        "use": "Remove debris before medication application."
+      }
+    ],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports skin health and recovery from irritation."
+      },
+      {
+        "name": "Vitamin E",
+        "benefit": "Supports skin repair and immune function."
+      }
+    ],
+    "safety_warnings": [
+      "Treat all pets in the household if advised by a veterinarian.",
+      "Do not insert cotton swabs deep into the ear canal."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C002",
+    "common_name": "Flea Infestation",
+    "aliases": [
+      "fleas",
+      "cat fleas",
+      "flea dirt",
+      "itching cat",
+      "scratching cat"
+    ],
+    "urgency": "Low",
+    "cause": "Infestation by fleas acquired from other animals or the environment.",
+    "warning": "Severe infestations may cause anemia in kittens.",
+    "symptoms": [
+      "itching",
+      "scratching",
+      "skin irritation",
+      "hair loss",
+      "restlessness"
+    ],
+    "visual_symptoms": [
+      "flea dirt",
+      "fleas visible in coat",
+      "hair thinning",
+      "red skin"
+    ],
+    "medicines": [
+      {
+        "name": "Selamectin",
+        "type": "Spot-on Parasite Control",
+        "dispensing": "Prescription"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May support skin barrier recovery."
+
+      }
+    ],
+    "safety_warnings": [
+      "Never use dog flea products containing permethrin on cats.",
+      "Treat the environment as well as the cat."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C003",
+    "common_name": "Ringworm",
+    "aliases": [
+      "ringworm",
+      "fungal skin infection",
+      "round bald patch",
+      "cat fungus"
+    ],
+    "urgency": "Medium",
+    "cause": "Dermatophyte fungal infection, commonly Microsporum canis.",
+    "warning": "Highly contagious to humans and other animals.",
+    "symptoms": [
+      "hair loss",
+      "itching",
+      "scaly skin",
+      "broken hairs"
+    ],
+    "visual_symptoms": [
+      "circular bald patches",
+      "crusty skin",
+      "scaling",
+      "patchy hair loss"
+    ],
+    "medicines": [
+      {
+        "name": "Itraconazole",
+        "type": "Oral Antifungal",
+        "dispensing": "Prescription"
+      }
+    ],
+    "topical_treatments": [
+      {
+        "name": "Lime Sulfur Dip",
+        "type": "Antifungal Treatment",
+        "use": "Veterinary supervised topical therapy."
+      }
+    ],
+    "supplements": [
+      {
+        "name": "L-Lysine",
+        "benefit": "Supports immune function."
+      }
+    ],
+    "safety_warnings": [
+      "Wear gloves when handling infected animals.",
+      "Disinfect bedding and grooming equipment."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C004",
+    "common_name": "Feline Acne",
+    "aliases": [
+      "cat acne",
+      "chin acne",
+      "blackheads on chin"
+    ],
+    "urgency": "Low",
+    "cause": "Follicular plugging and bacterial overgrowth, often affecting the chin.",
+    "warning": "Severe cases can become infected and painful.",
+    "symptoms": [
+      "chin bumps",
+      "chin redness",
+      "blackheads"
+    ],
+    "visual_symptoms": [
+      "black spots on chin",
+      "crusty chin",
+      "swollen chin"
+    ],
+    "medicines": [],
+    "topical_treatments": [
+      {
+        "name": "Chlorhexidine Wipes",
+        "type": "Antiseptic",
+        "use": "Clean affected area as directed."
+      }
+    ],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May help reduce skin inflammation."
+      }
+    ],
+    "safety_warnings": [
+      "Switch plastic bowls to stainless steel or ceramic."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C005",
+    "common_name": "Upper Respiratory Infection",
+    "aliases": [
+      "cat flu",
+      "sneezing cat",
+      "runny nose cat",
+      "cat cold"
+    ],
+    "urgency": "Medium",
+    "cause": "Commonly caused by feline herpesvirus or calicivirus infection.",
+    "warning": "Cats that stop eating can deteriorate quickly.",
+    "symptoms": [
+      "sneezing",
+      "nasal discharge",
+      "eye discharge",
+      "congestion"
+    ],
+    "visual_symptoms": [
+      "runny nose",
+      "watery eyes",
+      "eye crusts"
+    ],
+    "medicines": [
+      {
+        "name": "Veterinary Recovery Diet",
+        "benefit": "Supports calorie intake during illness."
+      },
+      {
+        "name": "Probiotic",
+        "benefit": "Supports digestive and immune health."
+      }
+    ],
+    "topical_treatments": [
+      {
+        "name": "Warm Saline Cleaning",
+        "type": "Supportive Care",
+        "use": "Clean eye and nasal discharge."
+      }
+    ],
+    "supplements": [
+      {
+        "name": "Veterinary Recovery Diet",
+        "benefit": "Supports calorie intake during illness."
+      }
+    ],
+    "safety_warnings": [
+      "Seek veterinary care if breathing difficulty develops."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C006",
+    "common_name": "Feline Asthma",
+    "aliases": [
+      "cat asthma",
+      "wheezing cat",
+      "cat breathing problem"
+    ],
+    "urgency": "Medium",
+    "cause": "Inflammation and narrowing of the lower airways.",
+    "warning": "Open-mouth breathing is an emergency.",
+    "symptoms": [
+      "coughing",
+      "wheezing",
+      "exercise intolerance"
+    ],
+    "visual_symptoms": [
+      "crouched posture during coughing",
+      "rapid breathing"
+    ],
+    "medicines": [
+      {
+        "name": "Bronchodilator Therapy",
+        "type": "Respiratory Medication",
+        "dispensing": "Prescription"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May support reduction of inflammatory responses."
+      },
+      {
+        "name": "Antioxidant Blend",
+        "benefit": "Supports respiratory health."
+      }
+    ],
+    "safety_warnings": [
+      "Avoid cigarette smoke and strong fragrances."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C007",
+    "common_name": "Hairballs",
+    "aliases": [
+      "hairball",
+      "vomiting hair",
+      "trichobezoar"
+    ],
+    "urgency": "Low",
+    "cause": "Accumulation of swallowed hair in the gastrointestinal tract.",
+    "warning": "Repeated vomiting without hairballs may indicate another disease.",
+    "symptoms": [
+      "retching",
+      "vomiting hair",
+      "decreased appetite"
+    ],
+    "visual_symptoms": [
+      "hairball vomit"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Hairball Control Fiber Supplement",
+        "benefit": "Supports movement of ingested hair through the gut."
+      }
+    ],
+    "safety_warnings": [
+      "Frequent grooming helps reduce hairballs."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C008",
+    "common_name": "FLUTD (Feline Lower Urinary Tract Disease)",
+    "aliases": [
+      "cat urinary problem",
+      "cat straining to urinate",
+      "blood in urine",
+      "blocked cat"
+    ],
+    "urgency": "Critical",
+    "cause": "Inflammation, crystals, stones, stress-related cystitis, or urethral obstruction.",
+    "warning": "Male cats unable to pass urine require immediate emergency treatment.",
+    "symptoms": [
+      "straining to urinate",
+      "frequent urination",
+      "blood in urine",
+      "crying in litter box"
+    ],
+    "visual_symptoms": [
+      "small urine spots",
+      "blood-tinged urine"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Urinary Support Diet",
+        "benefit": "Helps maintain urinary tract health."
+      }
+    ],
+    "safety_warnings": [
+      "Complete urinary blockage is life-threatening."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C009",
+    "common_name": "Conjunctivitis",
+    "aliases": [
+      "pink eye",
+      "red eye cat",
+      "eye infection cat"
+    ],
+    "urgency": "Medium",
+    "cause": "Infection, irritation, allergy, or viral disease.",
+    "warning": "Cloudy eye or severe pain requires urgent veterinary attention.",
+    "symptoms": [
+      "eye redness",
+      "eye discharge",
+      "squinting"
+    ],
+    "visual_symptoms": [
+      "red eye",
+      "eye crusts",
+      "swollen eyelids"
+    ],
+    "medicines": [],
+    "topical_treatments": [
+      {
+        "name": "Sterile Saline Eye Wash",
+        "type": "Eye Cleaning",
+        "use": "Remove discharge."
+      }
+    ],
+    "supplements": [
+      {
+        "name": "L-Lysine",
+        "benefit": "Supports immune function."
+      },
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports eye and immune health."
+      }
+    ],
+    "safety_warnings": [
+      "Do not use human eye medications without veterinary advice."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C010",
+    "common_name": "Abscess",
+    "aliases": [
+      "cat bite wound",
+      "cat abscess",
+      "infected wound"
+    ],
+    "urgency": "Medium",
+    "cause": "Bacterial infection following a bite or puncture wound.",
+    "warning": "Abscesses often rupture and require veterinary treatment.",
+    "symptoms": [
+      "swelling",
+      "pain",
+      "fever",
+      "lethargy"
+    ],
+    "visual_symptoms": [
+      "swollen lump",
+      "draining wound",
+      "red skin"
+    ],
+    "medicines": [
+      {
+        "name": "Veterinary Antibiotics",
+        "type": "Systemic Antibiotic",
+        "dispensing": "Prescription"
+      }
+    ],
+    "topical_treatments": [
+      {
+        "name": "Warm Compress",
+        "type": "Supportive Care",
+        "use": "May help drainage before veterinary treatment."
+      }
+    ],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports tissue recovery."
+      },
+      {
+        "name": "Probiotic",
+        "benefit": "Supports gut health during antibiotic use."
+      }
+    ],
+    "safety_warnings": [
+      "Do not squeeze or lance abscesses at home."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C011",
+    "common_name": "Gingivitis",
+    "aliases": [
+      "gum disease cat",
+      "red gums cat",
+      "bad breath cat"
+    ],
+    "urgency": "Medium",
+    "cause": "Inflammation of the gums caused by plaque, tartar, bacteria, or underlying viral disease.",
+    "warning": "Cats often hide dental pain. Reduced eating may be the first sign.",
+    "symptoms": [
+      "bad breath",
+      "drooling",
+      "difficulty eating",
+      "mouth pain"
+    ],
+    "visual_symptoms": [
+      "red gums",
+      "inflamed gums",
+      "tartar buildup"
+    ],
+    "detection_keywords": [
+      "red gums",
+      "bad breath",
+      "drooling"
+    ],
+    "medicines": [],
+    "topical_treatments": [
+      {
+        "name": "Veterinary Dental Gel",
+        "type": "Oral Antiseptic",
+        "use": "Applied to gums as directed."
+      }
+    ],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May support gum health and reduce inflammation."
+      },
+      {
+        "name": "Coenzyme Q10",
+        "benefit": "May support periodontal tissue health."
+      }
+    ],
+    "safety_warnings": [
+      "Professional dental cleaning may be required."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C012",
+    "common_name": "Periodontal Disease",
+    "aliases": [
+      "dental disease",
+      "tooth infection",
+      "cat periodontal disease"
+    ],
+    "urgency": "Medium",
+    "cause": "Progressive bacterial infection affecting gums, ligaments, and supporting tooth structures.",
+    "warning": "Untreated disease can result in tooth loss and systemic complications.",
+    "symptoms": [
+      "bad breath",
+      "drooling",
+      "mouth pain",
+      "difficulty chewing"
+    ],
+    "visual_symptoms": [
+      "heavy tartar",
+      "receding gums",
+      "loose teeth"
+    ],
+    "detection_keywords": [
+      "tartar",
+      "loose teeth",
+      "mouth pain"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May support gum health and reduce inflammation."
+      },
+      {
+        "name": "Coenzyme Q10",
+        "benefit": "May support periodontal tissue health."
+      }
+    ],
+    "safety_warnings": [
+      "Routine dental examinations are recommended."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C013",
+    "common_name": "Stomatitis",
+    "aliases": [
+      "feline stomatitis",
+      "severe mouth inflammation",
+      "mouth ulcers cat"
+    ],
+    "urgency": "High",
+    "cause": "Severe immune-mediated inflammation of oral tissues.",
+    "warning": "Can be extremely painful and significantly affect eating.",
+    "symptoms": [
+      "drooling",
+      "weight loss",
+      "difficulty eating",
+      "oral pain"
+    ],
+    "visual_symptoms": [
+      "bright red mouth",
+      "mouth ulcers",
+      "inflamed gums"
+    ],
+    "detection_keywords": [
+      "mouth ulcers",
+      "drooling",
+      "oral pain"
+    ],
+    "medicines": [
+      {
+        "name": "Anti-inflammatory Therapy",
+        "type": "Prescription",
+        "dispensing": "Veterinary Prescription"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May help support management of chronic inflammation."
+      },
+      {
+        "name": "Probiotic",
+        "benefit": "May support immune system balance."
+      }
+    ],
+    "safety_warnings": [
+      "Requires veterinary diagnosis and management."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C014",
+    "common_name": "Tooth Resorption",
+    "aliases": [
+      "resorptive lesion",
+      "painful tooth cat"
+    ],
+    "urgency": "Medium",
+    "cause": "Progressive destruction of tooth structure, common in adult cats.",
+    "warning": "One of the most painful feline dental diseases.",
+    "symptoms": [
+      "difficulty eating",
+      "drooling",
+      "jaw chattering",
+      "mouth sensitivity"
+    ],
+    "visual_symptoms": [
+      "damaged tooth",
+      "inflamed gum line"
+    ],
+    "detection_keywords": [
+      "broken tooth",
+      "jaw chattering"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May support oral comfort and reduce inflammation."
+      },
+      {
+        "name": "Dental Support Supplement",
+        "benefit": "Supports overall oral health."
+      }
+    ],
+    "safety_warnings": [
+      "Often requires dental extraction."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C015",
+    "common_name": "Diabetes Mellitus",
+    "aliases": [
+      "diabetic cat",
+      "high blood sugar cat"
+    ],
+    "urgency": "High",
+    "cause": "Insufficient insulin activity leading to elevated blood glucose.",
+    "warning": "Untreated diabetes can lead to diabetic ketoacidosis.",
+    "symptoms": [
+      "increased thirst",
+      "increased urination",
+      "weight loss",
+      "increased appetite"
+    ],
+    "visual_symptoms": [
+      "thin body condition",
+      "poor coat quality"
+    ],
+    "detection_keywords": [
+      "drinking a lot",
+      "weight loss",
+      "peeing a lot"
+    ],
+    "medicines": [
+      {
+        "name": "Veterinary Insulin",
+        "type": "Insulin Therapy",
+        "dispensing": "Prescription"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports metabolic and cardiovascular health."
+      },
+      {
+        "name": "High-Protein Veterinary Diet",
+        "benefit": "Helps maintain lean muscle mass and glucose control."
+      }
+    ],
+    "safety_warnings": [
+      "Insulin should only be used under veterinary supervision."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C016",
+    "common_name": "Hyperthyroidism",
+    "aliases": [
+      "overactive thyroid",
+      "old cat weight loss"
+    ],
+    "urgency": "High",
+    "cause": "Excessive production of thyroid hormone, usually due to benign thyroid enlargement.",
+    "warning": "Common in senior cats.",
+    "symptoms": [
+      "weight loss",
+      "increased appetite",
+      "hyperactivity",
+      "vomiting"
+    ],
+    "visual_symptoms": [
+      "thin body condition",
+      "unkempt coat"
+    ],
+    "detection_keywords": [
+      "hungry but losing weight",
+      "hyperactive"
+    ],
+    "medicines": [
+      {
+        "name": "Methimazole",
+        "type": "Antithyroid Medication",
+        "dispensing": "Prescription"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports overall health in senior cats."
+      },
+      {
+        "name": "Antioxidant Blend",
+        "benefit": "May help reduce oxidative stress."
+      }
+    ],
+    "safety_warnings": [
+      "Regular blood monitoring is required."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C017",
+    "common_name": "Chronic Kidney Disease",
+    "aliases": [
+      "CKD",
+      "kidney failure cat",
+      "renal disease"
+    ],
+    "urgency": "High",
+    "cause": "Progressive loss of kidney function, commonly seen in older cats.",
+    "warning": "Early diagnosis can significantly improve quality of life.",
+    "symptoms": [
+      "increased thirst",
+      "increased urination",
+      "weight loss",
+      "poor appetite"
+    ],
+    "visual_symptoms": [
+      "thin body condition",
+      "poor coat quality",
+      "dehydration"
+    ],
+    "detection_keywords": [
+      "drinking more water",
+      "losing weight",
+      "old cat"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May support renal health."
+      }
+    ],
+    "safety_warnings": [
+      "Prescription kidney diets are commonly recommended."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C018",
+    "common_name": "Liver Disease",
+    "aliases": [
+      "hepatopathy",
+      "liver failure cat"
+    ],
+    "urgency": "High",
+    "cause": "Various disorders affecting liver function including infection, inflammation, toxins, and hepatic lipidosis.",
+    "warning": "Jaundice is a medical emergency.",
+    "symptoms": [
+      "vomiting",
+      "poor appetite",
+      "weight loss",
+      "lethargy"
+    ],
+    "visual_symptoms": [
+      "yellow eyes",
+      "yellow gums",
+      "yellow skin"
+    ],
+    "detection_keywords": [
+      "yellow eyes",
+      "jaundice",
+      "yellow gums"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "SAMe",
+        "benefit": "May support liver function."
+      }
+    ],
+    "safety_warnings": [
+      "Yellow discoloration requires urgent veterinary evaluation."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C019",
+    "common_name": "Constipation",
+    "aliases": [
+      "hard stool cat",
+      "cat not pooping"
+    ],
+    "urgency": "Medium",
+    "cause": "Dehydration, low fiber intake, pain, or underlying disease.",
+    "warning": "Prolonged constipation can progress to megacolon.",
+    "symptoms": [
+      "straining to defecate",
+      "hard stool",
+      "reduced appetite"
+    ],
+    "visual_symptoms": [
+      "frequent litter box visits",
+      "straining posture"
+    ],
+    "detection_keywords": [
+      "hard stool",
+      "cannot poop",
+      "straining"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Fiber Supplement",
+        "benefit": "Supports normal bowel movements."
+      }
+    ],
+    "safety_warnings": [
+      "Seek veterinary care if no stool is passed for several days."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C020",
+    "common_name": "Diarrhea",
+    "aliases": [
+      "loose stool cat",
+      "runny stool cat"
+    ],
+    "urgency": "Low",
+    "cause": "Dietary changes, infection, parasites, stress, or gastrointestinal disease.",
+    "warning": "Kittens can become dehydrated rapidly.",
+    "symptoms": [
+      "loose stool",
+      "frequent defecation",
+      "abdominal discomfort"
+    ],
+    "visual_symptoms": [
+      "watery stool",
+      "soiled fur"
+    ],
+    "detection_keywords": [
+      "runny stool",
+      "loose motions"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Probiotic",
+        "benefit": "May support gastrointestinal health."
+      }
+    ],
+    "safety_warnings": [
+      "Blood in stool requires veterinary attention."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C021",
+    "common_name": "Pancreatitis",
+    "aliases": [
+      "pancreatitis",
+      "inflamed pancreas",
+      "cat abdominal pain"
+    ],
+    "urgency": "High",
+    "cause": "Inflammation of the pancreas. Can be associated with obesity, diabetes, inflammatory bowel disease, infections, or occur without a clear cause.",
+    "warning": "Can become life-threatening if severe dehydration or systemic inflammation develops.",
+    "symptoms": [
+      "vomiting",
+      "poor appetite",
+      "lethargy",
+      "abdominal pain",
+      "weight loss"
+    ],
+    "visual_symptoms": [
+      "hunched posture",
+      "dehydration",
+      "poor body condition"
+    ],
+    "detection_keywords": [
+      "vomiting",
+      "hunched cat",
+      "abdominal pain"
+    ],
+    "medicines": [
+      {
+        "name": "Supportive Veterinary Care",
+        "type": "Hospital Treatment",
+        "dispensing": "Veterinary Supervision"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Probiotic",
+        "benefit": "May support oral and immune health."
+      },
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May help reduce oral inflammation."
+      }
+    ],
+    "safety_warnings": [
+      "Do not attempt home treatment for severe pancreatitis."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C022",
+    "common_name": "Gastroenteritis",
+    "aliases": [
+      "stomach upset",
+      "vomiting and diarrhea",
+      "gut infection"
+    ],
+    "urgency": "Medium",
+    "cause": "Inflammation of the stomach and intestines caused by infection, dietary indiscretion, parasites, toxins, or food intolerance.",
+    "warning": "Kittens may become dehydrated rapidly.",
+    "symptoms": [
+      "vomiting",
+      "diarrhea",
+      "loss of appetite",
+      "abdominal discomfort"
+    ],
+    "visual_symptoms": [
+      "dehydration",
+      "weight loss"
+    ],
+    "detection_keywords": [
+      "vomiting",
+      "diarrhea",
+      "not eating"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Veterinary Probiotic",
+        "benefit": "Supports gastrointestinal recovery."
+      }
+    ],
+    "safety_warnings": [
+      "Persistent vomiting requires veterinary attention."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C023",
+    "common_name": "Food Allergy",
+    "aliases": [
+      "food sensitivity",
+      "food allergy dermatitis",
+      "allergic reaction food"
+    ],
+    "urgency": "Medium",
+    "cause": "Immune reaction to dietary proteins or ingredients.",
+    "warning": "Diagnosis requires a veterinary elimination diet trial.",
+    "symptoms": [
+      "itching",
+      "ear infections",
+      "vomiting",
+      "diarrhea"
+    ],
+    "visual_symptoms": [
+      "hair loss",
+      "skin redness",
+      "scratching"
+    ],
+    "detection_keywords": [
+      "itching",
+      "skin redness",
+      "food allergy"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports skin barrier health."
+      }
+    ],
+    "safety_warnings": [
+      "Food allergy diagnosis requires strict dietary control."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C024",
+    "common_name": "Allergic Dermatitis",
+    "aliases": [
+      "skin allergy",
+      "allergic skin disease",
+      "environmental allergy"
+    ],
+    "urgency": "Medium",
+    "cause": "Allergic reaction to environmental allergens such as pollen, dust mites, or mold.",
+    "warning": "Secondary skin infections are common.",
+    "symptoms": [
+      "itching",
+      "licking",
+      "scratching",
+      "skin irritation"
+    ],
+    "visual_symptoms": [
+      "red skin",
+      "hair loss",
+      "skin thickening"
+    ],
+    "detection_keywords": [
+      "itching",
+      "red skin",
+      "hair loss"
+    ],
+    "medicines": [],
+    "topical_treatments": [
+      {
+        "name": "Veterinary Antipruritic Shampoo",
+        "type": "Skin Care",
+        "use": "As directed by veterinarian."
+      }
+    ],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May reduce inflammation."
+      }
+    ],
+    "safety_warnings": [
+      "Persistent itching should be evaluated by a veterinarian."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C025",
+    "common_name": "Pyoderma",
+    "aliases": [
+      "bacterial skin infection",
+      "infected skin",
+      "cat pyoderma"
+    ],
+    "urgency": "Medium",
+    "cause": "Bacterial infection of the skin, often secondary to allergies, parasites, or wounds.",
+    "warning": "Underlying causes should be identified to prevent recurrence.",
+    "symptoms": [
+      "itching",
+      "skin lesions",
+      "hair loss",
+      "crusting"
+    ],
+    "visual_symptoms": [
+      "pustules",
+      "crusts",
+      "red skin"
+    ],
+    "detection_keywords": [
+      "skin infection",
+      "pustules",
+      "crusting"
+    ],
+    "medicines": [
+      {
+        "name": "Veterinary Antibiotic Therapy",
+        "type": "Prescription",
+        "dispensing": "Veterinary Prescription"
+      }
+    ],
+    "topical_treatments": [
+      {
+        "name": "Chlorhexidine Products",
+        "type": "Antiseptic"
+      }
+    ],
+    "supplements": [],
+    "safety_warnings": [
+      "Do not stop antibiotics early."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C026",
+    "common_name": "Roundworm Infestation",
+    "aliases": [
+      "roundworms",
+      "intestinal worms",
+      "toxocara"
+    ],
+    "urgency": "Medium",
+    "cause": "Infection with intestinal roundworms.",
+    "warning": "Can be transmitted to humans.",
+    "symptoms": [
+      "pot belly",
+      "weight loss",
+      "vomiting",
+      "diarrhea"
+    ],
+    "visual_symptoms": [
+      "worms in stool",
+      "poor body condition"
+    ],
+    "detection_keywords": [
+      "worms",
+      "pot belly",
+      "vomiting worms"
+    ],
+    "medicines": [
+      {
+        "name": "Veterinary Dewormer",
+        "type": "Antiparasitic",
+        "dispensing": "Veterinary Guidance"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Probiotic",
+        "benefit": "Supports digestive recovery after deworming."
+      },
+      {
+        "name": "Vitamin B Complex",
+        "benefit": "Supports recovery in underweight cats."
+      }
+    ],
+    "safety_warnings": [
+      "Practice good hygiene when handling feces."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C027",
+    "common_name": "Hookworm Infestation",
+    "aliases": [
+      "hookworms",
+      "intestinal parasite"
+    ],
+    "urgency": "Medium",
+    "cause": "Parasitic infection of the small intestine.",
+    "warning": "Severe infections may cause anemia.",
+    "symptoms": [
+      "weakness",
+      "weight loss",
+      "diarrhea",
+      "poor growth"
+    ],
+    "visual_symptoms": [
+      "pale gums",
+      "poor body condition"
+    ],
+    "detection_keywords": [
+      "pale gums",
+      "worms",
+      "anemia"
+    ],
+    "medicines": [
+      {
+        "name": "Veterinary Dewormer",
+        "type": "Antiparasitic"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Iron Support Supplement",
+        "benefit": "May support recovery from veterinarian-confirmed anemia."
+      },
+      {
+        "name": "Probiotic",
+        "benefit": "Supports intestinal health."
+      }
+
+    ],
+    "safety_warnings": [
+      "Heavy infestations require veterinary treatment."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C028",
+    "common_name": "Tapeworm Infestation",
+    "aliases": [
+      "tapeworms",
+      "rice grains in stool"
+    ],
+    "urgency": "Low",
+    "cause": "Intestinal parasite commonly transmitted through fleas.",
+    "warning": "Flea control is essential to prevent reinfection.",
+    "symptoms": [
+      "scooting",
+      "weight loss",
+      "visible worm segments"
+    ],
+    "visual_symptoms": [
+      "rice-like segments near anus",
+      "segments in stool"
+    ],
+    "detection_keywords": [
+      "rice grains",
+      "tapeworm",
+      "worm segments"
+    ],
+    "medicines": [
+      {
+        "name": "Praziquantel",
+        "type": "Antiparasitic",
+        "dispensing": "Veterinary Guidance"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+          "name": "Probiotic",
+          "benefit": "Supports gastrointestinal health."
+      },
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports coat recovery."
+      }
+    ],
+    "safety_warnings": [
+      "Treat flea infestations simultaneously."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C029",
+    "common_name": "Heartworm Disease",
+    "aliases": [
+      "heartworm",
+      "lungworm heartworm"
+    ],
+    "urgency": "High",
+    "cause": "Mosquito-transmitted parasitic infection affecting the heart and lungs.",
+    "warning": "Even a small number of worms can cause severe disease in cats.",
+    "symptoms": [
+      "coughing",
+      "breathing difficulty",
+      "vomiting",
+      "collapse"
+    ],
+    "visual_symptoms": [
+      "labored breathing",
+      "weakness"
+    ],
+    "detection_keywords": [
+      "coughing",
+      "breathing difficulty",
+      "collapse"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports cardiovascular health."
+      }
+    ],
+    "safety_warnings": [
+      "Preventive medication is preferred over treatment."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C030",
+    "common_name": "Notoedric Mange",
+    "aliases": [
+      "feline scabies",
+      "cat mange"
+    ],
+    "urgency": "Medium",
+    "cause": "Infestation with Notoedres cati mites.",
+    "warning": "Highly contagious to other cats.",
+    "symptoms": [
+      "intense itching",
+      "scratching",
+      "skin irritation"
+    ],
+    "visual_symptoms": [
+      "crusty ears",
+      "hair loss",
+      "thickened skin"
+    ],
+    "detection_keywords": [
+      "crusty ears",
+      "itching",
+      "mange"
+    ],
+    "medicines": [
+      {
+        "name": "Veterinary Antiparasitic Treatment",
+        "type": "Prescription"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports skin healing."
+      },
+      {
+        "name": "Biotin",
+        "benefit": "Supports coat regrowth."
+      }
+    ],
+    "safety_warnings": [
+      "Treat all exposed cats if advised by a veterinarian."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C031",
+    "common_name": "Feline Immunodeficiency Virus (FIV)",
+    "aliases": [
+      "FIV",
+      "feline AIDS",
+      "immune deficiency cat"
+    ],
+    "urgency": "High",
+    "cause": "Retroviral infection primarily transmitted through deep bite wounds from infected cats.",
+    "warning": "FIV-positive cats can live for many years with proper care and monitoring.",
+    "symptoms": [
+      "weight loss",
+      "recurrent infections",
+      "poor coat condition",
+      "gum disease",
+      "fever"
+    ],
+    "visual_symptoms": [
+      "weight loss",
+      "poor coat",
+      "oral inflammation"
+    ],
+    "detection_keywords": [
+      "recurrent infections",
+      "weight loss",
+      "gum disease"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May support overall health."
+      }
+    ],
+    "safety_warnings": [
+      "Requires lifelong veterinary monitoring."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C032",
+    "common_name": "Feline Leukemia Virus (FeLV)",
+    "aliases": [
+      "FeLV",
+      "feline leukemia"
+    ],
+    "urgency": "High",
+    "cause": "Contagious retroviral infection affecting immune system and bone marrow.",
+    "warning": "FeLV increases risk of cancer and severe infections.",
+    "symptoms": [
+      "weight loss",
+      "fever",
+      "anemia",
+      "poor appetite",
+      "recurrent infections"
+    ],
+    "visual_symptoms": [
+      "pale gums",
+      "weight loss",
+      "poor coat"
+    ],
+    "detection_keywords": [
+      "anemia",
+      "weight loss",
+      "recurrent infections"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports overall wellbeing."
+      },
+      {
+        "name": "Vitamin B Complex",
+        "benefit": "Supports cats with reduced appetite."
+      },
+      {
+        "name": "Antioxidant Blend",
+        "benefit": "Supports immune health."
+      }
+    ],
+    "safety_warnings": [
+      "Vaccination is available for at-risk cats."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C033",
+    "common_name": "Feline Infectious Peritonitis (FIP)",
+    "aliases": [
+      "FIP",
+      "wet FIP",
+      "dry FIP"
+    ],
+    "urgency": "Critical",
+    "cause": "Mutation of feline coronavirus leading to a severe systemic disease.",
+    "warning": "Early diagnosis significantly improves treatment outcomes.",
+    "symptoms": [
+      "fever",
+      "weight loss",
+      "lethargy",
+      "poor appetite"
+    ],
+    "visual_symptoms": [
+      "abdominal swelling",
+      "weight loss",
+      "eye abnormalities"
+    ],
+    "detection_keywords": [
+      "swollen abdomen",
+      "persistent fever",
+      "weight loss"
+    ],
+    "medicines": [
+      {
+        "name": "GS-441524 Based Therapy",
+        "type": "Veterinary Prescription",
+        "dispensing": "Veterinary Supervision"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "High-Calorie Recovery Diet",
+        "benefit": "Supports maintenance of body weight."
+      },
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports overall health."
+      }
+    ],
+    "safety_warnings": [
+      "Immediate veterinary evaluation recommended."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C034",
+    "common_name": "Feline Herpesvirus Infection",
+    "aliases": [
+      "FHV-1",
+      "cat herpesvirus",
+      "viral URI"
+    ],
+    "urgency": "Medium",
+    "cause": "Common viral infection causing respiratory and eye disease.",
+    "warning": "Stress may trigger recurrence.",
+    "symptoms": [
+      "sneezing",
+      "eye discharge",
+      "nasal discharge",
+      "congestion"
+    ],
+    "visual_symptoms": [
+      "watery eyes",
+      "eye crusting",
+      "runny nose"
+    ],
+    "detection_keywords": [
+      "eye discharge",
+      "sneezing",
+      "runny nose"
+    ],
+    "medicines": [],
+    "topical_treatments": [
+      {
+        "name": "Warm Saline Cleaning",
+        "type": "Supportive Care"
+      }
+    ],
+    "supplements": [
+      {
+        "name": "Probiotic",
+        "benefit": "Supports immune health."
+      },
+      {
+        "name": "Recovery Diet",
+        "benefit": "Supports nutrition during illness."
+      }
+    ],
+    "safety_warnings": [
+      "Maintain hydration and food intake."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C035",
+    "common_name": "Feline Calicivirus Infection",
+    "aliases": [
+      "calicivirus",
+      "cat mouth ulcers"
+    ],
+    "urgency": "Medium",
+    "cause": "Highly contagious viral respiratory disease.",
+    "warning": "Some strains can cause severe systemic illness.",
+    "symptoms": [
+      "fever",
+      "mouth ulcers",
+      "sneezing",
+      "nasal discharge"
+    ],
+    "visual_symptoms": [
+      "oral ulcers",
+      "eye discharge",
+      "nasal discharge"
+    ],
+    "detection_keywords": [
+      "mouth ulcers",
+      "sneezing",
+      "oral lesions"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Recovery Diet",
+        "benefit": "Supports calorie intake."
+      },
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May support inflammatory control."
+      }
+    ],
+    "safety_warnings": [
+      "Vaccination helps reduce disease severity."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C036",
+    "common_name": "Corneal Ulcer",
+    "aliases": [
+      "eye ulcer",
+      "injured cornea"
+    ],
+    "urgency": "High",
+    "cause": "Damage to the corneal surface due to trauma, infection, or chronic irritation.",
+    "warning": "Untreated ulcers may lead to blindness.",
+    "symptoms": [
+      "eye pain",
+      "squinting",
+      "tearing",
+      "light sensitivity"
+    ],
+    "visual_symptoms": [
+      "cloudy eye",
+      "red eye",
+      "partially closed eye"
+    ],
+    "detection_keywords": [
+      "cloudy eye",
+      "squinting",
+      "eye pain"
+    ],
+    "medicines": [
+      {
+        "name": "Veterinary Ophthalmic Medication",
+        "type": "Prescription"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports ocular surface health."
+      },
+      {
+        "name": "Vitamin E",
+        "benefit": "Provides antioxidant support."
+      }
+    ],
+    "safety_warnings": [
+      "Eye emergencies require prompt treatment."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C037",
+    "common_name": "Uveitis",
+    "aliases": [
+      "eye inflammation",
+      "uveitis cat"
+    ],
+    "urgency": "High",
+    "cause": "Inflammation inside the eye often associated with infection, trauma, cancer, or immune disease.",
+    "warning": "Can result in blindness if untreated.",
+    "symptoms": [
+      "eye pain",
+      "squinting",
+      "vision changes"
+    ],
+    "visual_symptoms": [
+      "cloudy eye",
+      "red eye",
+      "small pupil"
+    ],
+    "detection_keywords": [
+      "cloudy eye",
+      "eye inflammation",
+      "vision changes"
+    ],
+    "medicines": [
+      {
+        "name": "Veterinary Anti-inflammatory Eye Therapy",
+        "type": "Prescription"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May support management of inflammation."
+      }
+    ],
+    "safety_warnings": [
+      "Immediate ophthalmic examination recommended."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C038",
+    "common_name": "Glaucoma",
+    "aliases": [
+      "high eye pressure",
+      "glaucoma cat"
+    ],
+    "urgency": "Critical",
+    "cause": "Increased pressure within the eye causing optic nerve damage.",
+    "warning": "Permanent blindness can occur rapidly.",
+    "symptoms": [
+      "eye pain",
+      "vision loss",
+      "squinting"
+    ],
+    "visual_symptoms": [
+      "enlarged eye",
+      "cloudy eye",
+      "red eye"
+    ],
+    "detection_keywords": [
+      "enlarged eye",
+      "vision loss",
+      "cloudy eye"
+    ],
+    "medicines": [
+      {
+        "name": "Veterinary Pressure-Lowering Eye Medication",
+        "type": "Prescription"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [],
+    "safety_warnings": [
+      "Emergency veterinary attention required."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C039",
+    "common_name": "Urinary Tract Infection",
+    "aliases": [
+      "UTI",
+      "bladder infection"
+    ],
+    "urgency": "Medium",
+    "cause": "Bacterial infection affecting the urinary tract.",
+    "warning": "Symptoms may resemble FLUTD.",
+    "symptoms": [
+      "frequent urination",
+      "blood in urine",
+      "straining",
+      "painful urination"
+    ],
+    "visual_symptoms": [
+      "small urine spots",
+      "blood-stained urine"
+    ],
+    "detection_keywords": [
+      "blood urine",
+      "painful urination",
+      "straining"
+    ],
+    "medicines": [
+      {
+        "name": "Veterinary Antibiotic Therapy",
+        "type": "Prescription"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Urinary Support Supplement",
+        "benefit": "Supports urinary tract health."
+      },
+      {
+        "name": "Probiotic",
+        "benefit": "Supports gut health during antibiotic therapy."
+      }
+    ],
+    "safety_warnings": [
+      "Urine culture may be required."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C040",
+    "common_name": "Bladder Stones",
+    "aliases": [
+      "urinary stones",
+      "bladder crystals"
+    ],
+    "urgency": "High",
+    "cause": "Mineral crystal formation within the urinary tract.",
+    "warning": "May cause urinary obstruction, especially in male cats.",
+    "symptoms": [
+      "straining to urinate",
+      "blood in urine",
+      "frequent urination"
+    ],
+    "visual_symptoms": [
+      "small urine spots",
+      "painful urination posture"
+    ],
+    "detection_keywords": [
+      "blood urine",
+      "urinary blockage",
+      "straining"
+    ],
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Prescription Urinary Diet",
+        "benefit": "May help manage certain stone types."
+      }
+    ],
+    "safety_warnings": [
+      "Complete urinary blockage is a life-threatening emergency."
+    ],
+    "species": "cat"
+  },
+  {
+    "id": "C041",
+    "common_name": "Seizure Disorder",
+    "aliases": [
+      "cat seizure",
+      "cat convulsions",
+      "epilepsy",
+      "neurological episode"
+    ],
+    "urgency": "High",
+    "cause": "Can result from epilepsy, toxins, head trauma, liver disease, infections, metabolic disorders, or brain tumors.",
+    "warning": "A seizure lasting longer than 5 minutes is a life-threatening emergency.",
+    "symptoms": [
+      "collapse",
+      "muscle twitching",
+      "paddling movements",
+      "loss of consciousness",
+      "disorientation"
+    ],
+    "visual_symptoms": [
+      "body stiffening",
+      "uncontrolled movements",
+      "drooling"
+    ],
+    "detection_keywords": [
+      "convulsions",
+      "collapse",
+      "shaking"
+    ],
+    "affected_body_parts": [
+      "brain",
+      "nervous system"
+    ],
+    "species": "cat",
+    "medicines": [
+      {
+        "name": "Veterinary Anticonvulsant Therapy",
+        "type": "Prescription"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports neurological health."
+      },
+      {
+        "name": "Medium Chain Triglycerides (MCTs)",
+        "benefit": "May support brain function."
+      }
+    ],
+    "safety_warnings": [
+      "Do not place hands inside the cat's mouth during a seizure.",
+      "Emergency veterinary care required for prolonged seizures."
+    ]
+  },
+  {
+    "id": "C042",
+    "common_name": "Feline Hyperesthesia Syndrome",
+    "aliases": [
+      "rolling skin disease",
+      "twitching back syndrome",
+      "feline hyperesthesia"
+    ],
+    "urgency": "Medium",
+    "cause": "Poorly understood neurological and behavioral condition affecting skin sensitivity.",
+    "warning": "May be confused with seizures or skin disease.",
+    "symptoms": [
+      "sudden running",
+      "tail chasing",
+      "skin twitching",
+      "vocalization"
+    ],
+    "visual_symptoms": [
+      "rippling skin",
+      "tail attacking",
+      "sudden agitation"
+    ],
+    "detection_keywords": [
+      "rippling skin",
+      "tail chasing",
+      "back twitching"
+    ],
+    "affected_body_parts": [
+      "skin",
+      "nervous system"
+    ],
+    "species": "cat",
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports neurological and skin health."
+      },
+      {
+        "name": "L-Theanine",
+        "benefit": "May support calm behavior."
+      }
+    ],
+    "safety_warnings": [
+      "Veterinary evaluation is recommended to rule out other diseases."
+    ]
+  },
+  {
+    "id": "C043",
+    "common_name": "Arthritis",
+    "aliases": [
+      "joint disease",
+      "osteoarthritis",
+      "stiff cat"
+    ],
+    "urgency": "Medium",
+    "cause": "Degenerative joint disease commonly affecting older cats.",
+    "warning": "Cats often hide pain, making diagnosis difficult.",
+    "symptoms": [
+      "reduced jumping",
+      "stiffness",
+      "limping",
+      "reduced activity"
+    ],
+    "visual_symptoms": [
+      "difficulty climbing",
+      "slow movements",
+      "abnormal posture"
+    ],
+    "detection_keywords": [
+      "limping",
+      "stiffness",
+      "difficulty jumping"
+    ],
+    "affected_body_parts": [
+      "joints",
+      "hips",
+      "spine"
+    ],
+    "species": "cat",
+    "medicines": [
+      {
+        "name": "Veterinary Pain Management",
+        "type": "Prescription"
+      }
+    ],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "May support joint health."
+      },
+      {
+        "name": "Glucosamine and Chondroitin",
+        "benefit": "May support cartilage function."
+      }
+    ],
+    "safety_warnings": [
+      "Never give human pain medications to cats."
+    ]
+  },
+  {
+    "id": "C044",
+    "common_name": "Heatstroke",
+    "aliases": [
+      "overheating",
+      "heat exhaustion",
+      "heat stress"
+    ],
+    "urgency": "Critical",
+    "cause": "Exposure to excessive environmental heat leading to dangerous body temperature elevation.",
+    "warning": "Heatstroke can rapidly become fatal.",
+    "symptoms": [
+      "panting",
+      "weakness",
+      "collapse",
+      "vomiting"
+    ],
+    "visual_symptoms": [
+      "rapid breathing",
+      "red gums",
+      "collapse"
+    ],
+    "detection_keywords": [
+      "panting",
+      "collapse",
+      "overheating"
+    ],
+    "affected_body_parts": [
+      "whole body"
+    ],
+    "species": "cat",
+    "medicines": [],
+    "topical_treatments": [
+      {
+        "name": "Controlled Cooling",
+        "type": "Emergency First Aid"
+      }
+    ],
+    "supplements": [
+      {
+        "name": "Electrolyte Support Formula",
+        "benefit": "Supports hydration recovery."
+      }
+    ],
+    "safety_warnings": [
+      "Seek emergency veterinary care immediately."
+    ]
+  },
+  {
+    "id": "C045",
+    "common_name": "Poisoning",
+    "aliases": [
+      "toxin ingestion",
+      "cat poisoning",
+      "toxic exposure"
+    ],
+    "urgency": "Critical",
+    "cause": "Exposure to toxic substances including medications, chemicals, toxic plants, or household products.",
+    "warning": "Many toxins are fatal if treatment is delayed.",
+    "symptoms": [
+      "vomiting",
+      "drooling",
+      "weakness",
+      "collapse",
+      "seizures"
+    ],
+    "visual_symptoms": [
+      "tremors",
+      "drooling",
+      "collapse"
+    ],
+    "detection_keywords": [
+      "toxin",
+      "poison",
+      "drooling"
+    ],
+    "affected_body_parts": [
+      "multiple organs"
+    ],
+    "species": "cat",
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Recovery Diet",
+        "benefit": "Supports nutritional recovery after treatment."
+      }
+    ],
+    "safety_warnings": [
+      "Never induce vomiting unless instructed by a veterinarian."
+    ]
+  },
+  {
+    "id": "C046",
+    "common_name": "Trauma",
+    "aliases": [
+      "injury",
+      "accident",
+      "cat trauma"
+    ],
+    "urgency": "Critical",
+    "cause": "Physical injury resulting from falls, vehicle accidents, animal attacks, or other trauma.",
+    "warning": "Internal injuries may not be immediately visible.",
+    "symptoms": [
+      "pain",
+      "limping",
+      "bleeding",
+      "shock"
+    ],
+    "visual_symptoms": [
+      "wounds",
+      "swelling",
+      "abnormal posture"
+    ],
+    "detection_keywords": [
+      "injury",
+      "bleeding",
+      "limping"
+    ],
+    "affected_body_parts": [
+      "whole body"
+    ],
+    "species": "cat",
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports tissue recovery."
+      },
+      {
+        "name": "High-Protein Recovery Diet",
+        "benefit": "Supports healing."
+      }
+    ],
+    "safety_warnings": [
+      "Urgent veterinary examination recommended."
+    ]
+  },
+  {
+    "id": "C047",
+    "common_name": "Snake Bite",
+    "aliases": [
+      "snake envenomation",
+      "snake attack"
+    ],
+    "urgency": "Critical",
+    "cause": "Injection of venom from a venomous snake bite.",
+    "warning": "Rapid treatment significantly improves survival.",
+    "symptoms": [
+      "pain",
+      "swelling",
+      "weakness",
+      "collapse"
+    ],
+    "visual_symptoms": [
+      "bite marks",
+      "swelling",
+      "bleeding"
+    ],
+    "detection_keywords": [
+      "snake bite",
+      "swelling",
+      "bite marks"
+    ],
+    "affected_body_parts": [
+      "bite site",
+      "circulatory system"
+    ],
+    "species": "cat",
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [],
+    "safety_warnings": [
+      "Emergency veterinary care required immediately."
+    ]
+  },
+  {
+    "id": "C048",
+    "common_name": "Anxiety and Stress",
+    "aliases": [
+      "stress",
+      "anxiety",
+      "fearful cat"
+    ],
+    "urgency": "Low",
+    "cause": "Environmental changes, conflict with other animals, lack of enrichment, or stressful events.",
+    "warning": "Chronic stress may contribute to FLUTD and behavioral problems.",
+    "symptoms": [
+      "hiding",
+      "overgrooming",
+      "aggression",
+      "reduced appetite"
+    ],
+    "visual_symptoms": [
+      "hair loss from grooming",
+      "withdrawn behavior"
+    ],
+    "detection_keywords": [
+      "hiding",
+      "stress",
+      "overgrooming"
+    ],
+    "affected_body_parts": [
+      "behavioral"
+    ],
+    "species": "cat",
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "L-Theanine Supplement",
+        "benefit": "May support calm behavior."
+      }
+    ],
+    "safety_warnings": [
+      "Behavioral changes should be medically evaluated."
+    ]
+  },
+  {
+    "id": "C049",
+    "common_name": "Obesity",
+    "aliases": [
+      "overweight cat",
+      "fat cat"
+    ],
+    "urgency": "Medium",
+    "cause": "Excess calorie intake combined with inadequate physical activity.",
+    "warning": "Obesity increases risk of diabetes, arthritis, and urinary disease.",
+    "symptoms": [
+      "weight gain",
+      "reduced activity",
+      "exercise intolerance"
+    ],
+    "visual_symptoms": [
+      "excess body fat",
+      "rounded abdomen"
+    ],
+    "detection_keywords": [
+      "overweight",
+      "fat cat",
+      "weight gain"
+    ],
+    "affected_body_parts": [
+      "whole body"
+    ],
+    "species": "cat",
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "High-Protein Weight Management Diet",
+        "benefit": "Supports safe weight loss."
+      },
+      {
+        "name": "L-Carnitine",
+        "benefit": "May support fat metabolism."
+      }
+    ],
+    "safety_warnings": [
+      "Weight loss should occur gradually under veterinary guidance."
+    ]
+  },
+  {
+    "id": "C050",
+    "common_name": "Healthy Cat",
+    "aliases": [
+      "normal cat",
+      "healthy",
+      "no disease"
+    ],
+    "urgency": "None",
+    "cause": "No apparent disease detected.",
+    "warning": "This profile should only be selected when no disease indicators are present.",
+    "symptoms": [
+      "normal appetite",
+      "normal activity",
+      "normal urination",
+      "normal grooming"
+    ],
+    "visual_symptoms": [
+      "clean coat",
+      "bright eyes",
+      "healthy body condition"
+    ],
+    "detection_keywords": [
+      "healthy",
+      "normal",
+      "active"
+    ],
+    "affected_body_parts": [
+      "whole body"
+    ],
+    "species": "cat",
+    "medicines": [],
+    "topical_treatments": [],
+    "supplements": [
+      {
+        "name": "Balanced Complete Diet",
+        "benefit": "Supports overall health."
+      },
+      {
+        "name": "Omega-3 Fatty Acids",
+        "benefit": "Supports skin, coat, and cardiovascular health."
+      },
+      {
+        "name": "Probiotic",
+        "benefit": "Supports digestive and immune health."
+      }
+    ],
+    "safety_warnings": [
+      "Regular veterinary wellness examinations are still recommended."
+    ]
+  }
+]
