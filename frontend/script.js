@@ -1,6 +1,5 @@
 const API = "https://aipetscommunity-2.onrender.com";
 
-
 // ─── File Preview ───
 document.getElementById('fileInput').addEventListener('change', function(e) {
   const file = e.target.files[0];
@@ -142,6 +141,7 @@ function renderResult(d) {
                   <div class="med-meta">${escHtml(m.type||'Therapeutic')} · <span class="dispensing-badge ${(m.dispensing||'').toLowerCase().includes('otc')?'otc':'rx'}">${escHtml(m.dispensing||'As directed')}</span></div>
                   ${m.dose ? `<div class="med-dose">📋 ${escHtml(m.dose)}</div>` : ''}
                   ${m.note ? `<div class="med-note">💡 ${escHtml(m.note)}</div>` : ''}
+                  <div class="vet-approval-tag" style="color:#f59e0b; font-size:11px; margin-top:4px;">⚠ Not Vet-Approved</div>
                 </div>
               </div>`).join('')}
           </div></div>`;
@@ -185,6 +185,9 @@ function renderResult(d) {
       let warnHTML = '';
       if (warnings.length) {
         warnHTML = `<div class="condition-row">
+          <div class="condition-row">
+          <div class="vet-approval-tag" style="color:#f59e0b; font-size:12px; padding:8px; background:rgba(245,158,11,0.08); border-radius:6px;">⚠ Not Vet Approved</div>
+          </div>
           <div class="condition-row-label" style="color:#f59e0b;">⚠ Safety Warnings</div>
           <div class="condition-row-val">
             ${warnings.map(w => `<div class="safety-warn-item">⚠ ${escHtml(w)}</div>`).join('')}
@@ -257,6 +260,7 @@ function renderResult(d) {
       <span>Download Health Report (PDF)</span>
     </button>
     <div class="disclaimer">${escHtml(disclaimer)}</div>
+    <div class="disclaimer" style="color:#f59e0b; margin-top:8px;">⚠ Note: All recommended medicines and supplements must be used only after veterinary approval. This report does not replace professional veterinary consultation.</div>
   `;
 }
 
@@ -272,6 +276,7 @@ function downloadPDF() {
     generatePDF(_lastResult);
   }
 }
+
 function cleanPDFText(str) {
   return String(str || '')
     .replace(/[^\x20-\x7E\n\r]/g, '')
@@ -279,7 +284,8 @@ function cleanPDFText(str) {
     .trim();
 }
 
-function generatePDF(d) {
+// NOTE: must be async because we await the logo image loading
+async function generatePDF(d) {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
   const W = 210, margin = 18, contentW = W - margin * 2;
@@ -302,39 +308,52 @@ function generatePDF(d) {
   }
   function wText(str, x, yy, maxW, lh = 5) {
     str = cleanPDFText(str);
-
     const lines = doc.splitTextToSize(str, maxW);
-
     lines.forEach(line => {
       if (yy > 270) {
         doc.addPage();
         rect(0, W, 0, 297, C.bg);
         yy = 16;
       }
-
       doc.text(line, x, yy);
       yy += lh;
     });
-
     return yy;
   }
 
   // Background
   rect(0, W, 0, 297, C.bg);
 
+  // ── Load logo BEFORE drawing header (safe — won't crash if missing) ──
+  let logoImg = null;
+  try {
+    logoImg = await new Promise((resolve, reject) => {
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.onload = () => resolve(img);
+      img.onerror = () => reject(new Error('logo failed to load'));
+      img.src = window.location.origin + '/static/logo.png';
+    });
+  }   catch (e) {
+    console.warn('PDF: logo not loaded, continuing without it.', e);
+    logoImg = null;
+  }
+
   // Header
   fill(C.green); doc.rect(0,0,W,1.2,'F');
   rect(0, W, 0, 38, [8,12,10]);
-  text(C.green); font(18,'bold'); doc.text('Animalslover', margin, 16);
-  text(C.gray); font(8); doc.text('SMART PET HEALTH ANALYSIS SYSTEM', margin, 22);
+
+  if (logoImg) {
+    doc.addImage(logoImg, 'PNG', margin, 5, 20, 20);
+  } else {
+    text(C.green); font(18,'bold'); doc.text('Animalslover', margin, 16);
+    text(C.gray); font(8); doc.text('SMART PET HEALTH ANALYSIS SYSTEM', margin, 22);
+  }
+
   const rTime = new Date().toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'});
-  //doc.text(`Generated: ${rTime}`, W-margin, 20, {align:'right'});
-  doc.text(
-    cleanPDFText(`Generated: ${rTime}`),
-    W - margin,
-    20,
-    { align: 'right' }
-  );
+  text(C.gray); font(7.5);
+  doc.text(`Generated: ${rTime}`, W-margin, 34, {align:'right'});
+
   stroke(C.border); doc.setLineWidth(0.4); doc.line(0,38,W,38);
   y = 48;
 
@@ -361,9 +380,8 @@ function generatePDF(d) {
     cleanPDFText(d.analysis || 'AI scan complete.'),
     contentW - 32
   );
-  //const aLines = doc.splitTextToSize(d.analysis||'AI scan complete.', contentW-32);
   if(aLines[0]) doc.text(aLines[0], margin+30, y+17);
-  text(sColor); font(8,'bold'); doc.text(cleanPDFText(`Status: ${urgency}`),margin + 30,y + 24);;
+  text(sColor); font(8,'bold'); doc.text(cleanPDFText(`Status: ${urgency}`), margin + 30, y + 24);
   y += 34;
 
   // Conditions
@@ -434,12 +452,23 @@ function generatePDF(d) {
   fill(C.green);doc.rect(margin,y,contentW,3,'F');y+=6;
   text(C.white);font(10,'bold');doc.text('CLINICAL RECOMMENDATION',margin,y);y+=6;
   text(C.gray);font(8.5);y = wText(cleanPDFText(d.recommendation || 'No critical issues noted.'),margin,y,contentW,5);
+  y += 6;
+
   // Disclaimer
   checkPage(20);
   rect(margin,contentW,y,18,[12,12,18]);stroke(C.border);doc.setLineWidth(0.3);doc.rect(margin,y,contentW,18,'S');
   text(C.lightGray);font(7.5,'italic');
   const disc=doc.splitTextToSize(d.disclaimer||'AI screening only. Always consult a licensed veterinarian.',contentW-8);
   disc.forEach((l,i)=>doc.text(l,margin+4,y+5+i*4.5));
+  y += 22;
+
+  // ── Vet approval note ──
+  checkPage(14);
+  text(C.amber); font(7, 'bold');
+  y = wText(
+    'Note: All recommended medicines and supplements must be used only after veterinary approval. This report does not replace professional veterinary consultation.',
+    margin, y, contentW, 4
+  );
 
   // Footer
   const total = doc.internal.getNumberOfPages();
@@ -451,7 +480,7 @@ function generatePDF(d) {
     doc.text(`Page ${p} of ${total}`,W-margin,294,{align:'right'});
   }
 
-  doc.save(`PawCare_Report_${Date.now()}.pdf`);
+  doc.save(`Animalslover_Health_Report_${Date.now()}.pdf`);
 }
 
 function escHtml(str) {
