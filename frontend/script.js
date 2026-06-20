@@ -1,5 +1,6 @@
 const API = "https://aipetscommunity-2.onrender.com";
 
+
 // ─── File Preview ───
 document.getElementById('fileInput').addEventListener('change', function(e) {
   const file = e.target.files[0];
@@ -340,11 +341,31 @@ async function generatePDF(d) {
   }
 
   // Header
+  // fill(C.green); doc.rect(0,0,W,1.2,'F');
+  // rect(0, W, 0, 38, [8,12,10]);
+
+  // if (logoImg) {
+  //   doc.addImage(logoImg, 'PNG', margin, 5, 20, 20);
+  // } else {
+  //   text(C.green); font(18,'bold'); doc.text('Animalslover', margin, 16);
+  //   text(C.gray); font(8); doc.text('SMART PET HEALTH ANALYSIS SYSTEM', margin, 22);
+  // }
+
+  // const rTime = new Date().toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'});
+  // text(C.gray); font(7.5);
+  // doc.text(`Generated: ${rTime}`, W-margin, 34, {align:'right'});
+
+  // stroke(C.border); doc.setLineWidth(0.4); doc.line(0,38,W,38);
+  // y = 48;
+
+  // Header
   fill(C.green); doc.rect(0,0,W,1.2,'F');
   rect(0, W, 0, 38, [8,12,10]);
 
   if (logoImg) {
-    doc.addImage(logoImg, 'PNG', margin, 5, 20, 20);
+    const logoW = 55;
+    const logoH = logoW / 4.55;
+    doc.addImage(logoImg, 'PNG', margin, (38 - logoH) / 2, logoW, logoH);
   } else {
     text(C.green); font(18,'bold'); doc.text('Animalslover', margin, 16);
     text(C.gray); font(8); doc.text('SMART PET HEALTH ANALYSIS SYSTEM', margin, 22);
@@ -356,7 +377,6 @@ async function generatePDF(d) {
 
   stroke(C.border); doc.setLineWidth(0.4); doc.line(0,38,W,38);
   y = 48;
-
   // Score
   const score = typeof d.score==='number' ? d.score : 70;
   const urgency = d.urgency||'Monitor at home';
