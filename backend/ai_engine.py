@@ -392,7 +392,7 @@ import os as _os
 #         DISEASE_DB = json.load(_f)
 #     print(f"[INFO] Disease DB loaded: {len(DISEASE_DB)} diseases")
 DISEASE_DB = []
-for _fname in ["dog_diseases.json", "cat_diseases.json"]:
+for _fname in ["dog_diseases.json", "cat_diseases.json","cow_diseases.json"]:
     _path = _os.path.join(_os.path.dirname(__file__), _fname)
     try:
         with open(_path, "r", encoding="utf-8") as _f:
