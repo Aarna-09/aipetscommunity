@@ -437,7 +437,7 @@ def call_groq(client, messages: list, max_tokens: int = 1024, retries: int = 3) 
     for attempt in range(1, retries + 1):
         try:
             response = client.chat.completions.create(
-                model="meta-llama/llama-4-scout-17b-16e-instruct",
+                model="llama-3.3-70b-versatile",
                 messages=messages,
                 max_tokens=max_tokens,
                 temperature=0.3,
