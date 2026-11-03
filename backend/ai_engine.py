@@ -960,12 +960,17 @@ def fix_score(result: dict) -> dict:
 #  Matches AI condition name against aliases
 #  and injects real treatment data into result
 # ──────────────────────────────────────────────
+def _norm_animal(a):
+    a = (a or "dog").lower().strip()
+    if a in ("cow", "cows", "cattle", "bovine", "buffalo", "ox", "bull", "calf", "heifer"):
+        return "cow"
+    return a
 def enrich_from_db(result: dict) -> dict:
     if not DISEASE_DB or not result.get("conditions"):
         return result
 
     #detected animal (dog/cat/other)
-    detected_animal = (result.get("animal") or "dog").lower().strip()
+    detected_animal = _norm_animal(result.get("animal"))
 
     for condition in result["conditions"]:
         ai_name = (condition.get("name") or "").lower().strip()
@@ -977,7 +982,7 @@ def enrich_from_db(result: dict) -> dict:
 
         for disease in DISEASE_DB:
             # Check common_name
-            db_species = disease.get("species", "dog").lower()
+            db_species = _norm_animal(disease.get("species"))
             if db_species != detected_animal and db_species != "both":
                 continue
             # Check all aliases
