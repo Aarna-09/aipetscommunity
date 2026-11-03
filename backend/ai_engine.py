@@ -1087,7 +1087,7 @@ def post_process(result: dict) -> dict:
 # ──────────────────────────────────────────────
 #  PROMPTS
 # ──────────────────────────────────────────────
-IMAGE_PROMPT = """You are an expert veterinary AI assistant specializing in dogs and cats. Analyze this pet photo carefully.
+IMAGE_PROMPT = """You are an expert veterinary AI assistant specializing in dogs ,cats and Cows . Analyze this pet photo carefully.
 SCORING RULES (mandatory):
 - Any condition with likelihood "high"   → score 30-54
 - Any condition with likelihood "medium" → score 50-69
@@ -1104,7 +1104,7 @@ CONDITIONS RULES:
 You MUST respond ONLY with a valid JSON object. No intro text. No explanation. Just JSON:
 {
   "score": <integer 0-100>,
-  "animal": "<dog/cat/rabbit/other>",
+  "animal": "<dog/cat/cow/other>",
   "observations": [{"label": "<string>", "type": "<ok|warn|danger>"}],
   "analysis": "<2-3 sentences about what you visually see>",
   "conditions": [
@@ -1152,7 +1152,7 @@ CRITICAL RULES:
 You MUST respond ONLY with a valid JSON object. No intro text. No explanation. Just JSON:
 {{
   "score": <integer 0-100>,
-  "animal": "<dog|cat|other>",
+  "animal": "<dog|cat|cow|other>",
   "observations": [{{"label": "<string>", "type": "<ok|warn|danger>"}}],
   "analysis": "<2-3 sentence explanation>",
   "conditions": [
