@@ -2,6 +2,7 @@
   {
     "id": "C001",
     "common_name": "Foot and Mouth Disease",
+    "species": "cow",
     "aliases": [
       "FMD",
       "mouth blisters cow",
@@ -49,6 +50,7 @@
   {
     "id": "C002",
     "common_name": "Mastitis (Udder Infection)",
+    "species": "cow",
     "aliases": [
       "mastitis cow",
       "udder infection",
@@ -95,6 +97,7 @@
   {
     "id": "C003",
     "common_name": "Bloat (Ruminal Tympany)",
+    "species": "cow",
     "aliases": [
       "bloat cow",
       "gas bloat",
@@ -132,6 +135,7 @@
   {
     "id": "C004",
     "common_name": "Milk Fever",
+    "species": "cow",
     "aliases": [
       "milk fever cow",
       "low calcium cow",
@@ -169,6 +173,7 @@
   {
     "id": "C005",
     "common_name": "Ketosis",
+    "species": "cow",
     "aliases": [
       "ketosis cow",
       "acetonemia",
@@ -205,6 +210,7 @@
   {
     "id": "C006",
     "common_name": "Foot Rot",
+    "species": "cow",
     "aliases": [
       "foot rot cow",
       "hoof infection cattle",
@@ -250,6 +256,7 @@
   {
     "id": "C007",
     "common_name": "Lumpy Skin Disease",
+    "species": "cow",
     "aliases": [
       "LSD cow",
       "skin nodules cattle",
@@ -297,6 +304,7 @@
   {
     "id": "C008",
     "common_name": "Brucellosis",
+    "species": "cow",
     "aliases": [
       "brucellosis cow",
       "contagious abortion",
@@ -326,6 +334,7 @@
   {
     "id": "C009",
     "common_name": "Anthrax",
+    "species": "cow",
     "aliases": [
       "anthrax cow",
       "sudden death cattle",
@@ -355,6 +364,7 @@
   {
     "id": "C010",
     "common_name": "Blackleg",
+    "species": "cow",
     "aliases": [
       "black quarter",
       "blackleg cattle",
@@ -383,6 +393,7 @@
   {
     "id": "C011",
     "common_name": "Hemorrhagic Septicemia",
+    "species": "cow",
     "aliases": [
       "HS cattle",
       "shipping fever cow",
@@ -418,6 +429,7 @@
   },
   {
     "id": "C012",
+    "species": "cow",
     "common_name": "Calf Scours (Calf Diarrhea)",
     "aliases": [
       "calf diarrhea",
@@ -463,6 +475,7 @@
   {
     "id": "C013",
     "common_name": "Pneumonia (Calf/Cattle Pneumonia)",
+    "species": "cow",
     "aliases": [
       "cattle pneumonia",
       "calf pneumonia",
@@ -500,6 +513,7 @@
   {
     "id": "C014",
     "common_name": "Tick Fever (Babesiosis/Theileriosis)",
+    "species": "cow",
     "aliases": [
       "tick fever cattle",
       "redwater cow",
@@ -546,6 +560,7 @@
   {
     "id": "C015",
     "common_name": "Retained Placenta",
+    "species": "cow",
     "aliases": [
       "retained afterbirth cow",
       "placenta not passed",
@@ -582,6 +597,7 @@
   {
     "id": "C016",
     "common_name": "Displaced Abomasum",
+    "species": "cow",
     "aliases": [
       "twisted stomach cow",
       "LDA cattle",
@@ -618,6 +634,7 @@
   {
     "id": "C017",
     "common_name": "Ringworm",
+    "species": "cow",
     "aliases": [
       "ringworm cattle",
       "cow skin fungus",
@@ -655,6 +672,7 @@
   {
     "id": "C018",
     "common_name": "Pinkeye (Infectious Bovine Keratoconjunctivitis)",
+    "species": "cow",
     "aliases": [
       "pinkeye cattle",
       "cow eye infection",
@@ -700,6 +718,7 @@
   {
     "id": "C019",
     "common_name": "Warts",
+    "species": "cow",
     "aliases": [
       "cattle warts",
       "skin papilloma cow",
@@ -728,6 +747,7 @@
   {
     "id": "C020",
     "common_name": "Liver Fluke",
+    "species": "cow",
     "aliases": [
       "liver fluke cattle",
       "fasciola cow",
@@ -763,6 +783,7 @@
   },
   {
     "id": "C021",
+    "species": "cow",
     "common_name": "Worm Infestation (Gastrointestinal Worms)",
     "aliases": [
       "cattle worms",
@@ -800,6 +821,7 @@
   },
   {
     "id": "C022",
+    "species": "cow",
     "common_name": "Photosensitization",
     "aliases": [
       "sunburn cattle",
@@ -852,6 +874,7 @@
   },
   {
     "id": "C023",
+    "species": "cow",
     "common_name": "Hardware Disease (Traumatic Reticuloperitonitis)",
     "aliases": [
       "hardware disease cow",
@@ -888,6 +911,7 @@
   },
   {
     "id": "C024",
+    "species": "cow",
     "common_name": "Downer Cow Syndrome",
     "aliases": [
       "down cow",
@@ -924,6 +948,7 @@
   },
   {
     "id": "C025",
+    "species": "cow",
     "common_name": "Navel Ill (Omphalitis)",
     "aliases": [
       "navel infection calf",
@@ -970,6 +995,7 @@
   {
     "id": "C026",
     "common_name": "Coccidiosis (Calf Coccidiosis)",
+    "species": "cow",
     "aliases": [
       "coccidiosis calf",
       "bloody scours calf",
@@ -1006,6 +1032,7 @@
   {
     "id": "C027",
     "common_name": "Tetanus",
+    "species": "cow",
     "aliases": [
       "tetanus cow",
       "lockjaw cattle",
@@ -1042,6 +1069,7 @@
   {
     "id": "C028",
     "common_name": "Grass Tetany (Hypomagnesemia)",
+    "species": "cow",
     "aliases": [
       "grass tetany cow",
       "low magnesium cattle",
@@ -1078,6 +1106,7 @@
   {
     "id": "C029",
     "common_name": "Actinomycosis (Lumpy Jaw)",
+    "species": "cow",
     "aliases": [
       "lumpy jaw cow",
       "bone jaw infection cattle",
@@ -1114,6 +1143,7 @@
   {
     "id": "C030",
     "common_name": "Heat Stress",
+    "species": "cow",
     "aliases": [
       "heat stress cow",
       "cow overheating",
