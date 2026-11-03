@@ -1,4 +1,6 @@
-const API = "https://aipetscommunity-5.onrender.com";
+const API = location.hostname.includes("onrender.com")
+  ? ""
+  : "https://aipetscommunity-5.onrender.com";
 
 
 // ─── File Preview ───
