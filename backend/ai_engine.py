@@ -13,13 +13,8 @@
 # #  LOAD DISEASE DATABASE (dog_diseases.json)
 # # ──────────────────────────────────────────────
 # import os as _os
-# # _DB_PATH = _os.path.join(_os.path.dirname(__file__), "dog_diseases.json")
-# # try:
-# #     with open(_DB_PATH, "r", encoding="utf-8") as _f:
-# #         DISEASE_DB = json.load(_f)
-# #     print(f"[INFO] Disease DB loaded: {len(DISEASE_DB)} diseases")
 # DISEASE_DB = []
-# for _fname in ["dog_diseases.json", "cat_diseases.json","cow_diseases.json"]:
+# for _fname in ["dog_diseases.json", "cat_diseases.json", "cow_diseases.json"]:
 #     _path = _os.path.join(_os.path.dirname(__file__), _fname)
 #     try:
 #         with open(_path, "r", encoding="utf-8") as _f:
@@ -27,11 +22,15 @@
 #         print(f"[INFO] Loaded {_fname}")
 #     except:
 #         pass
-        
+
 # print(f"[INFO] Disease DB total: {len(DISEASE_DB)}")
-# #except Exception as _e:
-#     # DISEASE_DB = []
-#     # print(f"[WARN] dog_diseases.json not found: {_e}")
+
+# # ──────────────────────────────────────────────
+# #  MODEL NAMES (Groq deprecated old models — updated Aug 2026)
+# # ──────────────────────────────────────────────
+# TEXT_MODEL   = "openai/gpt-oss-120b"
+# VISION_MODEL = "qwen/qwen3.6-27b"
+
 # # ──────────────────────────────────────────────
 # #  ROBUST JSON PARSER
 # #  Handles: empty response, markdown fences,
@@ -58,13 +57,13 @@
 # #  Retries 3x on: empty response, bad JSON,
 # #  transient API errors
 # # ──────────────────────────────────────────────
-# def call_groq(client, messages: list, max_tokens: int = 1024, retries: int = 3) -> dict:
+# def call_groq(client, messages: list, max_tokens: int = 1024, retries: int = 3, model: str = TEXT_MODEL) -> dict:
 #     last_error = None
 
 #     for attempt in range(1, retries + 1):
 #         try:
 #             response = client.chat.completions.create(
-#                 model="llama-3.3-70b-versatile",
+#                 model=model,
 #                 messages=messages,
 #                 max_tokens=max_tokens,
 #                 temperature=0.3,
@@ -152,7 +151,7 @@
 # def enrich_from_db(result: dict) -> dict:
 #     if not DISEASE_DB or not result.get("conditions"):
 #         return result
-    
+
 #     #detected animal (dog/cat/other)
 #     detected_animal = (result.get("animal") or "dog").lower().strip()
 
@@ -244,7 +243,6 @@
 # # ──────────────────────────────────────────────
 # #  PROMPTS
 # # ──────────────────────────────────────────────
-# #IMAGE_PROMPT = """You are an expert veterinary AI assistant. Analyze this pet photo carefully.
 # IMAGE_PROMPT = """You are an expert veterinary AI assistant specializing in dogs and cats. Analyze this pet photo carefully.
 # SCORING RULES (mandatory):
 # - Any condition with likelihood "high"   → score 30-54
@@ -343,7 +341,7 @@
 #             {"type": "text",      "text": IMAGE_PROMPT}
 #         ]
 #     }]
-#     return post_process(call_groq(client, messages))
+#     return post_process(call_groq(client, messages, model=VISION_MODEL))
 
 
 # # ──────────────────────────────────────────────
@@ -377,7 +375,7 @@
 #         for f in frames
 #     ]
 #     content.append({"type": "text", "text": IMAGE_PROMPT})
-#     return post_process(call_groq(client, [{"role": "user", "content": content}]))
+#     return post_process(call_groq(client, [{"role": "user", "content": content}], model=VISION_MODEL))
 
 
 # # ──────────────────────────────────────────────
@@ -389,7 +387,7 @@
 #         "role": "user",
 #         "content": TEXT_PROMPT_TEMPLATE.format(description=description)
 #     }]
-#     return post_process(call_groq(client, messages))
+#     return post_process(call_groq(client, messages, model=TEXT_MODEL))
 
 import os
 import json
@@ -421,6 +419,14 @@ print(f"[INFO] Disease DB total: {len(DISEASE_DB)}")
 # ──────────────────────────────────────────────
 TEXT_MODEL   = "openai/gpt-oss-120b"
 VISION_MODEL = "qwen/qwen3.6-27b"
+
+# ──────────────────────────────────────────────
+#  GROQ CLIENT HELPER
+#  Cleans hidden spaces/newlines/quotes in the API key
+# ──────────────────────────────────────────────
+def get_client():
+    key = (os.getenv("GROQ_API_KEY") or "").strip().strip('"').strip("'")
+    return Groq(api_key=key, timeout=60.0)
 
 # ──────────────────────────────────────────────
 #  ROBUST JSON PARSER
@@ -473,6 +479,7 @@ def call_groq(client, messages: list, max_tokens: int = 1024, retries: int = 3, 
         except Exception as e:
             last_error = e
             print(f"[ERROR] API error attempt {attempt}: {e}")
+            print(f"[ERROR] real cause: {repr(e.__cause__)}")
             if attempt < retries:
                 time.sleep(2 * attempt)
 
@@ -619,6 +626,8 @@ def enrich_from_db(result: dict) -> dict:
 #  SHARED POST-PROCESSING
 # ──────────────────────────────────────────────
 def post_process(result: dict) -> dict:
+    if result.get("_fallback"):
+        return {"error": "AI is busy right now. Please try again in a minute."}
     if not isinstance(result.get("conditions"), list):
         result["conditions"] = []
     priority = {"high": 3, "medium": 2, "low": 1}
@@ -723,7 +732,7 @@ You MUST respond ONLY with a valid JSON object. No intro text. No explanation. J
 #  IMAGE ANALYSIS
 # ──────────────────────────────────────────────
 def analyze_pet(image_bytes: bytes, mime_type: str) -> dict:
-    client  = Groq(api_key=os.getenv("GROQ_API_KEY"))
+    client  = get_client()
     img_b64 = base64.b64encode(image_bytes).decode("utf-8")
     messages = [{
         "role": "user",
@@ -757,7 +766,7 @@ def extract_frames(video_bytes: bytes, num_frames: int = 4) -> list:
 
 
 def analyze_pet_video(video_bytes: bytes) -> dict:
-    client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+    client = get_client()
     frames = extract_frames(video_bytes, num_frames=4)
     if not frames:
         return {"error": "Video se frames nahi nikle"}
@@ -773,7 +782,7 @@ def analyze_pet_video(video_bytes: bytes) -> dict:
 #  TEXT-ONLY ANALYSIS
 # ──────────────────────────────────────────────
 def analyze_pet_text(description: str) -> dict:
-    client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+    client = get_client()
     messages = [{
         "role": "user",
         "content": TEXT_PROMPT_TEMPLATE.format(description=description)
