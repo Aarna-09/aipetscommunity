@@ -3,3 +3,6 @@ uvicorn
 python-multipart
 google-generativeai
 python-dotenv
+groq
+opencv-python-headless
+numpy
