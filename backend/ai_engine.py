@@ -1039,21 +1039,46 @@ def enrich_from_db(result: dict) -> dict:
 # ──────────────────────────────────────────────
 #  SHARED POST-PROCESSING
 # ──────────────────────────────────────────────
+# def post_process(result: dict) -> dict:
+#     if result.get("_fallback"):
+#         return {"error": "AI is busy right now. Please try again in a minute."}
+#     if not isinstance(result.get("conditions"), list):
+#         result["conditions"] = []
+#     priority = {"high": 3, "medium": 2, "low": 1}
+#     result["conditions"] = sorted(
+#         result["conditions"],
+#         key=lambda x: priority.get((x.get("likelihood") or "low").lower(), 1),
+#         reverse=True
+#     )[:1]
+#     result = enrich_from_db(result)   # ← ADD THIS LINE
+#     try:
+#         result = enrich_from_db(result)
+#     except Exception as e:
+#         import traceback
+#         traceback.print_exc()
+#         print(f"[ERROR] enrich failed: {e}")
+    
+#     return fix_score(result)
+
 def post_process(result: dict) -> dict:
     if result.get("_fallback"):
         return {"error": "AI is busy right now. Please try again in a minute."}
     if not isinstance(result.get("conditions"), list):
         result["conditions"] = []
+    result["conditions"] = [c for c in result["conditions"] if isinstance(c, dict)]   # ← NAYI LINE
     priority = {"high": 3, "medium": 2, "low": 1}
     result["conditions"] = sorted(
         result["conditions"],
         key=lambda x: priority.get((x.get("likelihood") or "low").lower(), 1),
         reverse=True
     )[:1]
-    result = enrich_from_db(result)   # ← ADD THIS LINE
+    try:                                                                               # ← NAYA BLOCK (4 lines)
+        result = enrich_from_db(result)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        print(f"[ERROR] enrich failed: {e}")
     return fix_score(result)
-
-
 # ──────────────────────────────────────────────
 #  PROMPTS
 # ──────────────────────────────────────────────
