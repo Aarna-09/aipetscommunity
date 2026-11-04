@@ -27,22 +27,40 @@ import glob
 #         pass
 
 # print(f"[INFO] Disease DB total: {len(DISEASE_DB)}")
+
 import glob
 DISEASE_DB = []
 _LOAD_LOG = []
+
+def _flatten(x):
+    if isinstance(x, dict):
+        yield x
+    elif isinstance(x, list):
+        for i in x:
+            yield from _flatten(i)
+
 _base = _os.path.dirname(_os.path.abspath(__file__))
-_seen = set()
+_seen_files = set()
+_seen_keys = set()
 for _dir in [_base, _os.path.dirname(_base), _os.getcwd()]:
     for _path in sorted(glob.glob(_os.path.join(_dir, "*diseas*.json"))):
         _real = _os.path.realpath(_path)
-        if _real in _seen:
+        if _real in _seen_files:
             continue
-        _seen.add(_real)
+        _seen_files.add(_real)
         try:
             with open(_path, "r", encoding="utf-8") as _f:
                 _data = json.load(_f)
-            DISEASE_DB.extend(_data)
-            _LOAD_LOG.append(f"OK {_path} ({len(_data)} entries)")
+            _count = 0
+            for _d in _flatten(_data):
+                if _d.get("id") is not None:
+                    _key = ((_d.get("species") or "dog").lower(), _d.get("id"))
+                    if _key in _seen_keys:
+                        continue
+                    _seen_keys.add(_key)
+                DISEASE_DB.append(_d)
+                _count += 1
+            _LOAD_LOG.append(f"OK {_path} ({_count} entries)")
         except Exception as _e:
             _LOAD_LOG.append(f"FAIL {_path}: {_e}")
 for _l in _LOAD_LOG:
@@ -262,12 +280,12 @@ def enrich_from_db(result: dict) -> dict:
             condition["safety_warnings"] = matched.get("safety_warnings", [])
 
             # Override treatment text with real medicine names
-            med_names = [m["name"] for m in matched.get("medicines", [])]
+            med_names = [m.get("name", "") for m in matched.get("medicines", []) if isinstance(m, dict)]
             if med_names:
                 condition["treatment"] = " | ".join(med_names)
 
             # Override supplements text with real supplement names
-            sup_names = [s["name"] for s in matched.get("supplements", [])]
+            sup_names = [s.get("name", "") for s in matched.get("supplements", []) if isinstance(s, dict)]
             if sup_names:
                 condition["supplements"] = " | ".join(sup_names)
 
