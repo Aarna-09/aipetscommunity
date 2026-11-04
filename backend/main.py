@@ -150,6 +150,15 @@ app.mount("/static", StaticFiles(directory=os.path.join(FRONTEND_DIR, "static"))
 @app.get("/")
 def root():
     return FileResponse(os.path.join(FRONTEND_DIR, "index.html"))
+@app.get("/debug")
+def debug():
+    import ai_engine
+    return {
+        "db_count": len(ai_engine.DISEASE_DB),
+        "load_log": ai_engine._LOAD_LOG,
+        "backend_files": os.listdir(os.path.dirname(os.path.abspath(__file__))),
+    }    
+    
 
 @app.get("/script.js")
 def serve_script():
