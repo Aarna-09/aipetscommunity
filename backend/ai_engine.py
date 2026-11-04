@@ -801,19 +801,39 @@ from groq import Groq
 # ──────────────────────────────────────────────
 #  LOAD DISEASE DATABASE (dog_diseases.json)
 # ──────────────────────────────────────────────
-import os as _os
+# import os as _os
+# DISEASE_DB = []
+# for _fname in ["dog_diseases.json", "cat_diseases.json", "cow_diseases.json"]:
+#     _path = _os.path.join(_os.path.dirname(__file__), _fname)
+#     try:
+#         with open(_path, "r", encoding="utf-8") as _f:
+#             DISEASE_DB.extend(json.load(_f))
+#         print(f"[INFO] Loaded {_fname}")
+#     except:
+#         pass
+
+# print(f"[INFO] Disease DB total: {len(DISEASE_DB)}")
+import glob
 DISEASE_DB = []
-for _fname in ["dog_diseases.json", "cat_diseases.json", "cow_diseases.json"]:
-    _path = _os.path.join(_os.path.dirname(__file__), _fname)
-    try:
-        with open(_path, "r", encoding="utf-8") as _f:
-            DISEASE_DB.extend(json.load(_f))
-        print(f"[INFO] Loaded {_fname}")
-    except:
-        pass
-
+_LOAD_LOG = []
+_base = _os.path.dirname(_os.path.abspath(__file__))
+_seen = set()
+for _dir in [_base, _os.path.dirname(_base), _os.getcwd()]:
+    for _path in sorted(glob.glob(_os.path.join(_dir, "*diseas*.json"))):
+        _real = _os.path.realpath(_path)
+        if _real in _seen:
+            continue
+        _seen.add(_real)
+        try:
+            with open(_path, "r", encoding="utf-8") as _f:
+                _data = json.load(_f)
+            DISEASE_DB.extend(_data)
+            _LOAD_LOG.append(f"OK {_path} ({len(_data)} entries)")
+        except Exception as _e:
+            _LOAD_LOG.append(f"FAIL {_path}: {_e}")
+for _l in _LOAD_LOG:
+    print("[DB-LOAD]", _l)
 print(f"[INFO] Disease DB total: {len(DISEASE_DB)}")
-
 # ──────────────────────────────────────────────
 #  MODEL NAMES (Groq deprecated old models — updated Aug 2026)
 # ──────────────────────────────────────────────
